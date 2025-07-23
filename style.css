@@ -1,0 +1,508 @@
+/* --- Zmienne kolorystyczne i globalne ustawienia --- */
+:root {
+    --primary-color: #0097A7; /* Główny kolor - Turkus */
+    --secondary-color: #00796B; /* Ciemniejszy turkus dla akcentów */
+    --dark-grey: #333333;      /* Kolor tekstu */
+    --medium-grey: #666666;    /* Drugorzędny tekst */
+    --light-grey-bg: #f4f4f4;  /* Tło dla sekcji */
+    --white-color: #ffffff;
+    --font-family-body: 'Lato', sans-serif;
+    --font-family-headings: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-body);
+    color: var(--dark-grey);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Nagłówek i Nawigacja --- */
+header {
+    background: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: var(--font-family-headings);
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--medium-grey);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+}
+
+/* --- Sekcja Hero --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600/0097A7/FFFFFF?text=Wizualizacja+Budynku') no-repeat center center/cover;
+    color: var(--white-color);
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-family-headings);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+/* --- Sekcja Aktualności --- */
+.latest-news {
+    padding: 4rem 0;
+    background: var(--light-grey-bg);
+}
+
+.latest-news h2 {
+    text-align: center;
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-date {
+    color: var(--medium-grey);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content h3 {
+    font-family: var(--font-family-headings);
+    margin: 0 0 1rem 0;
+}
+
+.card-content p {
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* --- Stopka --- */
+footer {
+    background: var(--dark-grey);
+    color: var(--light-grey-bg);
+    padding: 3rem 0 1rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    font-family: var(--font-family-headings);
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col a {
+    color: var(--light-grey-bg);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid var(--medium-grey);
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+/* --- Style dla podstrony "O nas" --- */
+
+.page-header {
+    background: var(--light-grey-bg);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: var(--font-family-headings);
+    font-size: 2.8rem;
+    color: var(--dark-grey);
+    margin: 0;
+}
+
+.about-us-content {
+    padding: 4rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.2rem;
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.about-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team {
+    padding: 4rem 0;
+    background: var(--light-grey-bg);
+}
+
+.team h2 {
+    text-align: center;
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: var(--white-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid var(--primary-color);
+}
+
+.team-member h4 {
+    font-family: var(--font-family-headings);
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.team-member p {
+    color: var(--medium-grey);
+    margin: 0;
+}
+
+/* --- Poprawki dla mniejszych ekranów --- */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Style dla podstrony "Kontakt" --- */
+
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Daje więcej miejsca na formularz */
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.contact-details h3, .contact-form h3 {
+    font-family: var(--font-family-headings);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.contact-details h4 {
+    font-family: var(--font-family-headings);
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.contact-details p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Style formularza */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    box-sizing: border-box; /* Ważne dla zachowania szerokości */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 151, 167, 0.5);
+}
+
+.contact-form button {
+    width: auto;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.map-section {
+    width: 100%;
+    height: 450px; /* Wysokość mapy */
+}
+
+/* Poprawki dla mniejszych ekranów */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Style dla podstrony "Oferta" --- */
+
+.offer-section {
+    padding: 4rem 0;
+}
+
+.offer-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    color: var(--medium-grey);
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.offer-card {
+    background: var(--light-grey-bg);
+    border: 1px solid #e0e0e0;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.offer-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.offer-card h3 {
+    font-family: var(--font-family-headings);
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+.offer-card p {
+    margin: 0 0 2rem 0;
+    min-height: 80px; /* Zapewnia równą wysokość tekstu */
+}
+/* --- Style dla listy aktualności --- */
+.news-list-section {
+    padding: 4rem 0;
+}
+
+/* --- Style dla pojedynczego artykułu --- */
+.article-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.article-header h1 {
+    font-family: var(--font-family-headings);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.article-meta {
+    color: var(--medium-grey);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.article-featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.article-content h2 {
+    font-family: var(--font-family-headings);
+    color: var(--primary-color);
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    background: var(--light-grey-bg);
+    font-style: italic;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+/* Klasa do tymczasowego ukrywania elementów */
+.ukryty {
+    display: none !important;
+}
+.map-section iframe {
+    display: block;     /* Ważne! To pozwala na centrowanie elementu */
+    width: 50%;   /* Ustawia szerokość na dokładnie jedną drugą */
+    min-width: 320px;   /* Minimalna szerokość, aby mapa nie była za mała na telefonie */
+    height: 400px;      /* Możesz dostosować wysokość, jeśli chcesz */
+    margin: 0 auto;     /* To jest "magiczna" reguła, która centruje element */
+    border: 0;          /* Usuwa ewentualną ramkę */
+    border-radius: 8px; /* Zostawiamy ładne, zaokrąglone rogi */
+}
